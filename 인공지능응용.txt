@@ -1,0 +1,180 @@
+<Visual Studio Code>
+1. Ctrl+alt+C -> Save and Compile
+2. Ctrl+alt+R -> Execute
+
+
+선택된 셀을 실행 : Ctrl + Enter
+실행 후 다음 셀 이동 : Shift + Enter
+실행 후 다음 셀 추가 : Alt + Enter
+저장 : Ctrl + Shift
+엔터키 : 편집모드
+ESC : 선택모드
+마크다운 전환 : Ctrl + MM
+코드 전환 : Ctrl + MY
+코드셀에 줄번호 부여 : Ctrl + ML
+바로 윗줄에 셀 생성 : Ctrl + MA
+바로 아랫줄에 셀 생성 : Ctrl + MB
+셀 삭제 : Ctrl + MD
+실행 멈춤 : Ctrl + MI
+작업 종료 : Ctrl + M+
+
+<마크다운> 확장자 : .md
+강조 : #
+진하게 : **진하게**
+밑줄 : __밑줄__ (코랩 : <u>밑줄</u>)
+취소 : ~~취소~~
+이탤릭 : _이탤릭_
+줄바꿈 : 문장 뒤에 스페이스 2번
+블럭인용 : > 1depth	
+		>> 2depth
+목록 :   * 목록
+		+ 목록	Tab 누르면 2depth
+		- 목록
+		1. 목록
+Python Code Block : ```Python 코드 ```
+하이퍼링크 : <http://google.com>
+수평선 : *** 혹은 ---
+표 : | 1열 | 2열 | 3열 |
+그림 : ![이미지설명문구](이미지URL)
+체크박스 : * [] , * [x]
+Latex 수식 문법 : $$ 수식 $$
+
+주석 : #, ''', """
+
+<파이썬 문법>
+def : 정의하기
+input : 입력 받기
+print : 출력 하기
+
+.1f = 앞에 숫자는 소수점 몇 번째 자리 까지 표시를 하기 위한 조건
+
+List : [] 
+- list(range(10)) : 0 ~ 9
+- list(range(1,10)) : 1 ~ 9
+- list(range(2,10,2)) : 2 4 6 8
+- list를 더하면 리스크 끼리 붙여진다.
+- list를 곱하면 같은 리스트가 반복된다.
+- list.append(5) = 5를 추가
+- list.insert(2, 10) = 2번째에 10 추가 (0번째부터 시작)
+- list.pop() = 맨 끝에 값 제거
+- len(list) = 개수세기
+- list.index(2) = 2번째 위치 원소 반환
+- list.sort() = 오름차순
+- print(list[~]) : ~ 값 추출
+
+튜플 : ()
+: 리스트와 비슷하지만 수정 불가
+
+세트 : {}
+: 리스트와 비슷하지만 원소 중복 불가
+- 교집합 : &
+- 합집합 : |
+- 차집합 : -
+- issuperset : 부분집합
+
+딕셔너리 : {}
+: 각 원소가 key:value로 저장
+- ex) {'name' : 'John', 'age' : 15 } , ~['name'] => 'John'
+- ex) first_user = {'name':'John'} second_user = {'name':'Paul'}
+users = [first_user, second_user]
+print(users[0]['name']) => John
+
+변수 : 아무거나 넣으면 됨.  
+
+for 변수 in ~
+
+행렬 선언
+.ones : 1행렬
+.zeros : 0행렬
+.eye : 단위행렬 
+.array([[]]) : 일반 행렬
+.shape : Matrix 형태 출력
+.dtype : 데이터형 출력
+.astype(np.float64) : float64으로 데이터형 변경
+* 사칙 연산 가능
+.T : Transpose 연산
+.dot : 행렬곱
+* tmp = data_range[1:4] tmp[1] = 20 -> 포인터가 반환됨
+numpy.linalg : .inv  : 역행렬
+
+<Matplot>
+plt.plot(x,y) : 그래프 그리기
+plt.show()
+plt.xlabel('')
+plt.title('')
+plt.legned(['Sine', 'Cosine'])
+plt.clf() : 그래프 간격 조절
+- left = 0.0
+- bottom = 0.0
+- right = 1.0
+- top = 1.0
+- wspace = 1.0
+- plt.subplots_adjust(left,bottom,right,top,wspace)
+subplot(2,1,2) : 세로 2개, 가로 1개, 2번 그래프 선언
+plt.text( 4, 0.5  'here!') : 4, 0.5 위치에 here! 출력
+plt.annotate('min', xy = (np.pi, -1), xytext=(5, -0.5), arrowprops=dict(facecolor='black', shrink=0.05),) : 그래프에서 어떤 지점을 시각화
+
+<Git>
+드라이브에 마운트 : 
+from google.colab import drive
+drive.mount('/content/drive')
+
+폴더 이동 :
+cd /content/drive/MyDrive/~
+
+Git Clone :
+!git clone "[code]"
+
+Git Init :
+!git init
+
+이메일, username 설정 :
+!git config --global user.email "이메일 주소"
+!git config --global user.name "username" 
+
+Commit 하기 :
+!git add . 									: 모든 파일 선택
+!git commit -m "Edit Readme.md"				: Commit을 하는데 -m은 "Edit Readme.md" comment 달아서 commit
+!git log 
+
+Token 발급 : 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
+
+Token 추가 :
+!git remote add repo-basic https://siwulea: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@https://github.com/siwulea/AI-Application.git
+
+Push :
+!git push -u repo-basic main
+
+Collaborator)
+Setting - Collaborators - Add People : 초대하기
+
+1. !git clone "~"
+2. !git config --local ~ 
+3. !git add .
+4. !git commit -m "~"							: Collaborator는 Token 상관 없나?
+5. !git remote add ~ 
+6. !git push -u ~ main
+
+<Branch>
+Local 에서 Branch 가져오기 : !git checkout -b branch01
+!git status  : 어디 브랜치에 있는 지 확인
+!git branch  : 브랜치 종류 확인
+
+!git add .
+!git push repo-basic branch01
+
+<Merge>
+github - Pull requests
+
+Pull Requests)
+Fork : 남의 repository를 pull 받는 것 -> 읽기 전용
+
+!git clone "~" : 내 Local로 받아야 되므로, 주소는 fork한 내 repository로
+
+Pull은 두 가지가 있음.
+1. fork해온 repository에 pull하는 거
+2. fork해온 내 repository에 pull하는 거
+
+-> 보통 1번으로 pull을 하게 되면 원 주인은 branch를 따둔다. 
+
+한 번 Merge를 해 주면, Contributor가 된다. 
